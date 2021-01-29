@@ -35,10 +35,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    #MY APPS
+    # MY APPS
     'blog.apps.BlogConfig',
     'frontend.apps.FrontendConfig',
-    #DJANGO APPS
+    # DJANGO APPS
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -130,3 +130,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Para que Django busque en cada aplicacion por su static respectivo.
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "frontend/static"),
+# ]
