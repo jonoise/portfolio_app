@@ -12,8 +12,9 @@ class PostList(ListView):
     template_name = 'blog/post/list.html'
 
 
-def post_detail(request):
-    pass
+class PostDetail(DetailView):
+    model = Post
+    template_name = 'blog/post/detail.html'
 
 
 def post_delete(request):

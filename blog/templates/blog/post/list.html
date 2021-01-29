@@ -5,7 +5,9 @@
 {% block body %}
 {% for post in posts %}
 <div class="post_card">
-    <h1>{{post.title}}</h1>
+    <a href="{{post.get_absolute_url}}">
+        <h1>{{post.title}}</h1>
+    </a>
     <h5>Written by: {{post.author}}</h5>
     <small>Published on: {{post.publish}}</small>
 
