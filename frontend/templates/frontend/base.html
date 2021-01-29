@@ -6,14 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static '/main.css' %}">
+    {% block custom_css %}
+    <!--CUSTOM CSS FOR EACH DIFFERENT APP-->
+    {% endblock custom_css %}
+
+    <!--TODO: Añadir aquí el secondary.css-->
+
+    <!--BOX ICONS-->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
+    <!--TITLE-->
     <title>{% block title %}{% endblock title %}</title>
-
 </head>
 
 <body>
-    {% block body %}{% endblock body %}
+    {% block body %}
+    <!--BODY-->
+    {% endblock body %}
 </body>
 
 </html>
