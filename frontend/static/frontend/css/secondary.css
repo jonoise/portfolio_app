@@ -1,0 +1,18 @@
+:root {
+    --main_color: black;
+    --sec_color: white;
+
+    --font_color: white;
+    --sec_font_color: black;
+
+    --border_color: white;
+    --font_hover: #17b978;
+    --icon_hover: #492fa7;
+    --font_family: 'Roboto Mono', sans-serif;
+}
+
+.languages_layout img, 
+.projects img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}

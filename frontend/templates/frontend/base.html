@@ -10,7 +10,7 @@
     <!--CUSTOM CSS FOR EACH DIFFERENT APP-->
     {% endblock %}
 
-    <!--TODO: Añadir aquí el secondary.css-->
+    <link id="theme-style" type="text/css" rel="stylesheet" href="">
 
     <!--BOX ICONS-->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -23,6 +23,10 @@
     {% block body %}
     <!--BODY-->
     {% endblock body %}
+    <script type="text/javascript">
+        let static = "{% static 'frontend/css' %}"
+    </script>
+    <script type="text/javascript" src="{% static 'frontend/js/main.js' %}"></script>
 </body>
 
 </html>

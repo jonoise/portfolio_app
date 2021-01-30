@@ -1,8 +1,185 @@
 {% extends 'frontend/base.html' %}
 
-{% block title %}Index portfolio{% endblock title %}
+{% load static %}
+
+{% block title %}Amilkar Munoz - Jr. Full Stack Developer{% endblock title %}
 
 
 {% block body %}
-<h1>PORTFOLIO :D</h1>
+<section class="navbar">
+    <div class="container flex-column">
+        <div class="switch">
+            <div class="toggle_section">
+                <input type="checkbox" class="toggle_checkbox" id="check" />
+                <label class="toggle_label" for="check">
+                    <div class="toggle_ball"></div>
+                </label>
+            </div>
+            <h2>Amilkar Solo - Jr Full Stack Developer from Costa Rica</h2>
+        </div>
+        <nav>
+            <ul>
+                <a href="#">
+                    <li>ABOUT</li>
+                </a>
+                <a href="#">
+                    <li>PORTFOLIO</li>
+                </a>
+                <a href="#">
+                    <li>CONTACT</li>
+                </a>
+                <a href="#">
+                    <li>BLOG</li>
+                </a>
+                <a href="#">
+                    <li>WHAT'S NEXT</li>
+                </a>
+            </ul>
+        </nav>
+    </div>
+</section>
+<section class="personal">
+    <div class="container grid">
+        <div class="info_layout grid">
+            <div class="my_img">
+                <img src="{%static 'frontend/images/profile_pic.png'%}" alt="">
+            </div>
+            <div class="my_info">
+                <h4>Personal Info</h4>
+                <hr>
+                <p>Name: Amilkar Munoz</p>
+                <p>Made in: Costa Rica</p>
+                <p>Manufactured in: 1994</p>
+                <p>Core Tool: Python 3</p>
+                <p id="extra_height">Biggest Dream: Take a selfie with George Hotz.</p>
+                <div class="social_icons">
+                    <h6>Connect with me</h6>
+                    <a target="_blank" href="https://www.github.com/soloamilkar"><i class='bx bxl-github'></i></a>
+                    <a target="_blank" href="#"><i class='bx bxl-twitter'></i></a>
+                    <a target="_blank" href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+            <div class="my_journey">
+                <small style="font-size:10px;">This is a div, class="my_journey". Inpect
+                    my code, all feedback is welcome :)</small>
+
+                <hr>
+                <p>Hello world :) I was not sure about to what actually write in here. I was thinking to
+                    deliver a picture of myself not being this guy that only sits in front of the computer
+                    all-day-long trying to figuring out how to crack the CODE!!! But the truth is that I'm
+                    that guy.
+                    Since I discovered coding (august/2020) I haven't been able to stop.</p>
+                <br>
+                <p><strong>That being said:</strong> I'm a self-taught software-developer apprentice
+                    from Costa Rica aiming to master back end technologies, looking for my own coding style, trying
+                    to mix my own experiences with
+                    the art of coding. Always hungry for learning new technologies. <a href="">read +</a></p>
+            </div>
+        </div>
+        <div class="languages_layout">
+            <div class="title">
+                <h3>MY STACK ♥</h3>
+            </div>
+            <div class="lang">
+                <div class="lang_img">
+                    <img src="{%static 'frontend/images/logos/python_logo-100.jpg'%}" alt="">
+                </div>
+                <div class="lang_img">
+                    <img src="{%static 'frontend/images/logos/django_logo-100.jpg'%}" alt="">
+                </div>
+                <div class="lang_img">
+                    <img src="{%static 'frontend/images/logos/postgres_logo-100.jpg'%}" alt="">
+                </div>
+            </div>
+            <div class="lang">
+                <div class="lang_img">
+                    <img src="{%static 'frontend/images/logos/html_logo-100.jpg'%}" alt="">
+                </div>
+                <div class="lang_img">
+                    <img src="{%static 'frontend/images/logos/css_logo-100.jpg'%}" alt="">
+                </div>
+                <div class="lang_img">
+                    <img src="{%static 'frontend/images/logos/js_logo-100.jpg'%}" alt="">
+                </div>
+            </div>
+            <div class="links">
+                <p>Check us out →</p>
+                <a href="#"><img src="{%static 'frontend/images/links/descargar_curriculum-100.jpg'%}" alt=""></a>
+                <a href=" #"><img src="{%static 'frontend/images/links/ucr_logo-100.jpg'%}" alt=""></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="projects">
+    <div class="container flex-column">
+        <h1>PORTFOLIO</h1>
+        <div class="grid grid-3">
+            <div class="grid-card">
+                <div class="picture">
+                    <img src="{%static 'frontend/images/projects/project_bug-100.jpg'%}" alt="">
+                </div>
+                <div class="description p-5">
+                    <p>Diseñé un sistema Helpdesk para trackear problemas con los features de X
+                        aplicación. Cada tickete se abre por un usuario y es atendido por un encargado.
+                        Para leer más al respecto -> <a href="">click!</a>
+                    </p>
+                </div>
+                <div class="tags p-3">
+                    Python - Django - HTML - CCS
+                </div>
+            </div>
+            <div class="grid-card">
+                <div class="picture">
+                    <img src="{%static 'frontend/images/projects/project_reservations-100.jpg'%}" alt="">
+                </div>
+                <div class="description">
+                    <p>Hice esta app para un amigo. Fue la primer app "oficial" que hice. En un principio
+                        él usó el layout provisionalmente, después lo cambió, pero conservó el backend♥.
+                    </p>
+                </div>
+                <div class="tags">
+                    Python - Django - HTML - CSS
+
+                </div>
+            </div>
+            <div class="grid-card">
+                <div class="picture">
+                    <img src="{%static 'frontend/images/projects/project_portfolio-100.jpg'%}" alt="">
+                </div>
+                <div class="description">
+                    <p> Dentro de mi portfolio encontramos este website, este mismísimo website
+                        en el que estás navegando ahora mismo.
+                        Twitee todo el proceso, por si te interesa <a href="#">leer +</a></p>
+                </div>
+                <div class="tags">
+                    Python - Django - HTML - CSS
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact">
+    <div class="container flex">
+        <div class="contact-form">
+            <h1>CONTACT</h1>
+            <p>Déjame un mensaje para saber que estuviste por aquí! Será un gusto leerte. :)</p>
+            <div class="card">
+                <form>
+                    <!--1 form control div f/e input
+                        and add the margindesired-->
+                    <div class="form-control">
+                        <input type="text" name="name" placeholder="Nombre">
+                    </div>
+                    <div class="form-control">
+                        <input type="text" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-control">
+                        <textarea class="textarea" type="text" name="message" placeholder="Mensaje"></textarea>
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock body %}
