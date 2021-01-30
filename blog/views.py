@@ -15,6 +15,7 @@ class PostList(ListView):
 class PostDetail(DetailView):
     model = Post
     template_name = 'blog/post/detail.html'
+    context_object_name = 'post'
 
 
 def post_delete(request):

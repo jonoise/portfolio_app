@@ -1,0 +1,30 @@
+{% extends 'frontend/base.html' %}
+{% load static %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block title %}{{post.title}}{% endblock title %}
+
+
+{% block body %}
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0"
+    nonce="J9c70icq"></script>
+<section class="content">
+    <div class="container">
+        <div class="post grid">
+            <div class="post_title">
+                <h1>{{post.title}}</h1>
+            </div>
+            <div class="post_body">
+
+            </div>
+            <div class="fb-comments" data-href="http://localhost:8000/{{post.get_absolute_url}}" data-width=""
+                data-numposts="5">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
