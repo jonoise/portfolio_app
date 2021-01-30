@@ -1,15 +1,25 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
+from taggit.models import Tag
 
 # Create your views here.
 
 
-class PostList(ListView):
-    queryset = Post.published.all()
-    context_object_name = 'posts'
-    paginate_by = 3
-    template_name = 'blog/post/list.html'
+def post_list(request, tag_slug=None):
+    posts = Post.published.all()
+    tag = None
+
+    if tag_slug:
+        tag = get_object_or_404(Tag, slug=tag_slug)
+        posts = posts.filter(tags__in=[tag])
+
+    context = {
+        'posts': posts,
+        'tag': tag,
+    }
+
+    return render(request, 'blog/post/list.html', context)
 
 
 class PostDetail(DetailView):

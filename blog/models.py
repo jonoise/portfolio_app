@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth.models import User
+from taggit.managers import TaggableManager
 
 # Create your models here.
 
@@ -33,6 +34,7 @@ class Post(models.Model):
     objects = models.Manager()
     draft = DraftManager()
     published = PublishedManager()
+    tags = TaggableManager()
 
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
