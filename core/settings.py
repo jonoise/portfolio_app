@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     # MY APPS
     'blog.apps.BlogConfig',
     'frontend.apps.FrontendConfig',
+    # 3RD PARTY
+    'taggit',
     # DJANGO APPS
     'django.contrib.admin',
     'django.contrib.auth',
@@ -139,3 +141,7 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# TAGGIT case-insensitive setting
+TAGGIT_CASE_INSENSITIVE = True
