@@ -81,54 +81,7 @@
         </div>
     </div>
 </section>
-<section class="projects">
-    <div class="container flex-column">
-        <h1>PORTFOLIO</h1>
-        <div class="grid grid-3">
-            <div class="grid-card">
-                <div class="picture">
-                    <img src="{%static 'frontend/images/projects/project_bug-100.jpg'%}" alt="">
-                </div>
-                <div class="description p-5">
-                    <p>Diseñé un sistema Helpdesk para trackear problemas con los features de X
-                        aplicación. Cada tickete se abre por un usuario y es atendido por un encargado.
-                        Para leer más al respecto -> <a href="">click!</a>
-                    </p>
-                </div>
-                <div class="tags p-3">
-                    Python - Django - HTML - CCS
-                </div>
-            </div>
-            <div class="grid-card">
-                <div class="picture">
-                    <img src="{%static 'frontend/images/projects/project_reservations-100.jpg'%}" alt="">
-                </div>
-                <div class="description">
-                    <p>Hice esta app para un amigo. Fue la primer app "oficial" que hice. En un principio
-                        él usó el layout provisionalmente, después lo cambió, pero conservó el backend♥.
-                    </p>
-                </div>
-                <div class="tags">
-                    Python - Django - HTML - CSS
-
-                </div>
-            </div>
-            <div class="grid-card">
-                <div class="picture">
-                    <img src="{%static 'frontend/images/projects/project_portfolio-100.jpg'%}" alt="">
-                </div>
-                <div class="description">
-                    <p> Dentro de mi portfolio encontramos este website, este mismísimo website
-                        en el que estás navegando ahora mismo.
-                        Twitee todo el proceso, por si te interesa <a href="#">leer +</a></p>
-                </div>
-                <div class="tags">
-                    Python - Django - HTML - CSS
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{% include 'frontend/projects.html' %}
 <section class="contact">
     <div class="container flex">
         <div class="contact-form">
