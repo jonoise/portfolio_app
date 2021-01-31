@@ -88,7 +88,7 @@ img {
     padding: 20px;
 }
 
-.body .post_card .card_title:hover {
+.body .post_card .post_card_title:hover {
     color:red;
 }
 
