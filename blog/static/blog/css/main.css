@@ -61,7 +61,7 @@ img {
     grid-template-rows: 100px 1fr 100px;   
 }
 
-.grid_blog .title {
+.grid_blog .blog_title {
     grid-area: "header";
     grid-column: span 2;
 }
@@ -78,6 +78,12 @@ img {
 
 .grid_blog .pagination {
     grid-area: "pagination";
+}
+
+/* BLOG - TITLE */
+
+.grid_blog .blog_title h1 {
+    font-size: 36px;
 }
 
 /* BLOG - POST CARD */
