@@ -65,10 +65,9 @@
                 </ul>
             </div>
         </div>
-        <div class="fb-comments" data-href="http://localhost:8000/{{post.get_absolute_url}}" data-numposts="5"
-            data-width="600">
+        <div class="pagination">
+            {% include "frontend/pagination.html" with page=posts %}
         </div>
-    </div>
     </div>
 </section>
 

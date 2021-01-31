@@ -51,14 +51,14 @@ img {
     grid-template-areas: 
         "header header"
         "body sidebar"
-        "comments sidebar"
+        "pagination sidebar"
     ;
 
     /*grid gaps*/
     column-gap: 20px;
 
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 100px 1fr 200px;   
+    grid-template-rows: 100px 1fr 100px;   
 }
 
 .grid_blog .title {
@@ -76,8 +76,8 @@ img {
 
 }
 
-.grid_blog .fb-comments {
-    grid-area: "comments";
+.grid_blog .pagination {
+    grid-area: "pagination";
 }
 
 /* BLOG - POST CARD */
