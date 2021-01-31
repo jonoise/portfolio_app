@@ -11,16 +11,16 @@
         </div>
         <nav>
             <ul>
-                <a href="#">
-                    <li>ABOUT</li>
+                <a href="{% url 'frontend:index' %}">
+                    <li>HOME</li>
                 </a>
-                <a href="#">
+                <a href="{% url 'blog:posts_by_tag' 'portfolio' %}">
                     <li>PORTFOLIO</li>
                 </a>
                 <a href="#">
                     <li>CONTACT</li>
                 </a>
-                <a href="#">
+                <a href="{% url 'blog:index' %}">
                     <li>BLOG</li>
                 </a>
                 <a href="#">

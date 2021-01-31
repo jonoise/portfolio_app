@@ -19,14 +19,10 @@ def post_list(request, tag_slug=None):
         'tag': tag,
     }
 
-    return render(request, 'blog/post/list.html', context)
+    return render(request, 'blog/post/index.html', context)
 
 
 class PostDetail(DetailView):
     model = Post
     template_name = 'blog/post/detail.html'
     context_object_name = 'post'
-
-
-def post_delete(request):
-    pass
