@@ -11,87 +11,17 @@
 {% block body %}
 {% include 'frontend/navbar.html' %}
 <section class="blog">
-    <div class="container grid_blog">
-        <div class="title">
-            <h1>IM THE LONELINEST MAN ALIVE</h1>
+    <div class="container grid_post">
+        <div class="post_cover">
+            <img src="{{ post.thumbnail.url }}" alt="">
+            <div class="title">
+                <h1>{{post.title.title}}</h1>
+                <h5>escrito por <a href="{% url 'frontend:index' %}">{{post.author.first_name}}
+                        {{post.author.last_name}}</a>. Publicado:
+                    {{post.publish|date:'M d, Y'}}</h5>
+            </div>
         </div>
-        <div class="body">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam illum velit est obcaecati!
-                Laboriosam itaque doloribus nulla dignissimos saepe hic quibusdam pariatur, est veniam architecto
-                laborum similique. Distinctio, unde natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Nisi harum eveniet voluptates ipsam id voluptatem fugit architecto neque molestias consequuntur?
-                Velit
-                ut veritatis aut nisi a reprehenderit ratione dolore voluptate. Lorem ipsum, dolor sit amet
-                consectetur
-                adipisicing elit. Hic fugit corrupti quisquam reiciendis nesciunt velit, accusantium quam, quod
-                veritatis officia nisi quas provident delectus obcaecati sit aliquam commodi omnis nostrum. Lorem
-                Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Laborum eos adipisci quam reprehenderit libero
-                possimus, voluptas consectetur ex nam, nulla dolorem expedita laudantium veritatis eligendi quaerat
-                facere consequuntur harum corporis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                magnam
-                impedit illum laudantium, nulla labore maiores cupiditate dolorem, voluptates quae voluptatem, at
-                expedita sed voluptatum. Quo suscipit nisi aperiam quaerat!
-                TRABAJANDO CON GIT: ELIMINAR RAMAS LOCALES Y REMOTAS
-                24 / 08 / 2013 OTROS
-                Hoy publicamos este pequeño tutorial Git donde explicamos cómo borrar ramas, tanto locales como
-                remotas, en un repositorio Git.
-
-                Para eliminar una rama de nuestro repositorio local ejecutaremos el siguiente comando:
-
-
-                $ git branch -d nombre_rama
-
-                En el caso de que esa rama contenga trabajos sin fusionar, el comando anterior nos devolverá el
-                siguiente error:
-
-
-                error: The branch 'nombre-rama' is not an ancestor of your current HEAD.
-                If you are sure you want to delete it, run 'git branch -D nombre-rama'.
-
-                Si aún así queremos eliminar esa rama, se puede forzar el borrado de la siguiente manera:
-
-
-                $ git branch -D nombre-rama
-
-                En el caso de querer eliminar una rama del repositorio remoto, la sintaxis será la siguiente:
-
-
-                $ git push origin :nombre-rama
-
-                Y de esta forma, desaparecerá la rama nombre-rama del servidor.
-                TRABAJANDO CON GIT: ELIMINAR RAMAS LOCALES Y REMOTAS
-                24 / 08 / 2013 OTROS
-                Hoy publicamos este pequeño tutorial Git donde explicamos cómo borrar ramas, tanto locales como
-                remotas, en un repositorio Git.
-
-                Para eliminar una rama de nuestro repositorio local ejecutaremos el siguiente comando:
-
-
-                $ git branch -d nombre_rama
-
-                En el caso de que esa rama contenga trabajos sin fusionar, el comando anterior nos devolverá el
-                siguiente error:
-
-
-                error: The branch 'nombre-rama' is not an ancestor of your current HEAD.
-                If you are sure you want to delete it, run 'git branch -D nombre-rama'.
-
-                Si aún así queremos eliminar esa rama, se puede forzar el borrado de la siguiente manera:
-
-
-                $ git branch -D nombre-rama
-
-                En el caso de querer eliminar una rama del repositorio remoto, la sintaxis será la siguiente:
-
-
-                $ git push origin :nombre-rama
-
-                Y de esta forma, desaparecerá la rama nombre-rama del servidor.
-            </p>
-        </div>
-        <div class="sidebar flex">
+        <div class="sidebar">
             <div class="recent_posts">
                 <h3>Recemt Posts</h3>
                 <ul>
@@ -109,8 +39,8 @@
                 </ul>
             </div>
         </div>
-        <div class="fb-comments" data-href="http://localhost:8000/{{post.get_absolute_url}}" data-numposts="5"
-            data-width="">
+        <div class="post_body">
+            <p>{{post.body}}</p>
         </div>
     </div>
 </section>

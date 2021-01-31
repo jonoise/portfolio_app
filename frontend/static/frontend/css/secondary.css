@@ -14,7 +14,8 @@
 
 .languages_layout img, 
 .projects img,
-.post_card_picture img {
+.post_card_picture img,
+.post_cover img {
     -webkit-filter: invert(1);
     filter: invert(1);
 }

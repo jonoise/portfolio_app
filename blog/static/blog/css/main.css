@@ -102,6 +102,24 @@ img {
     margin: 10px 0;
 }
 
+/* DETAIL */
+
+.grid_post {
+    min-height: 40em;
+    display: grid;
+    grid-template-areas: 
+        "thumbnail sidebar"
+        "body sidebar"
+        "pagination sidebar"
+    ;
+
+    /*grid gaps*/
+    column-gap: 20px;
+
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr 100px;   
+}
+
 /* UTILITIES */
 
 .blog {
