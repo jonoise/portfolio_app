@@ -28,7 +28,7 @@ class Post(models.Model):
     title = models.CharField(max_length=250, verbose_name='title')
     description = models.TextField(null=True, blank=True)
     thumbnail = models.ImageField(
-        upload_to='blog/thumbnails/', blank=True, null=True)
+        upload_to='blog/thumbnails/', blank=True, null=True, default="/blog/default_blog.jpg")
     slug = models.SlugField(max_length=250, unique_for_date='publish')
     body = models.TextField()
 
