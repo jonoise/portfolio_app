@@ -54,8 +54,11 @@ img {
         "comments sidebar"
     ;
 
+    /*grid gaps*/
+    column-gap: 20px;
+
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 200px 1fr 200px;   
+    grid-template-rows: 100px 1fr 200px;   
 }
 
 .grid_blog .title {
@@ -77,6 +80,21 @@ img {
     grid-area: "comments";
 }
 
+/* BLOG - POST CARD */
+
+.body .post_card {
+    border: 2px solid var(--border_color);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.body .post_card .card_title:hover {
+    color:red;
+}
+
+.body .post_card .tags, .description, .card_title, .small {
+    margin: 10px 0;
+}
 
 /* UTILITIES */
 
