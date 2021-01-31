@@ -1,0 +1,67 @@
+{% extends 'frontend/base.html' %}
+{% load blog_tags %}
+{% load static %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+{% endblock %}
+
+{% block title %}Blog - Posts{% endblock title %}
+
+{% block body %}
+{% include 'frontend/navbar.html' %}
+
+<section class="blog">
+    <div class="container grid_blog">
+        <div class="title">
+            <h1>BLOG HOME PAGE</h1>
+        </div>
+        <div class="body">
+            {% if tag %}
+            <h1>Aprende más sobre {{tag.name.lower}} con estos posts:</h1>
+            {% endif %}
+            {% for post in posts %}
+            <div class="post_card">
+                <a href="{{post.get_absolute_url}}">
+                    <h1>{{post.title}}</h1>
+                </a>
+                <small>Tags:
+                    {% for tag in post.tags.all %}
+                    <a href="{% url 'blog:posts_by_tag' tag.slug %}">{{tag.name}}</a>{% if not forloop.last %},
+                    {% endif %}
+                    {% endfor %}
+                </small>
+                <h5>Written by: {{post.author}}</h5>
+                <small>Published on: {{post.publish}}</small>
+
+                <p>{{post.body|truncatewords:30}}</p>
+            </div>
+
+            {% endfor %}
+        </div>
+        <div class="sidebar flex">
+            <div class="recent_posts">
+                <h3>Recemt Posts</h3>
+                <ul>
+                    <li>Qué es un proxy model?</li>
+                    <li>Empezando con Linux. Un viaje a UNIX.</li>
+                    <li>Django, el framework para perfeccionistas.</li>
+                </ul>
+            </div>
+            <div class="hottest_topics">
+                <h3>Hottest Topics</h3>
+                <ul>
+                    <li>Python asd asdas dasd asdas asdasdads</li>
+                    <li>Django</li>
+                    <li>HTML</li>
+                </ul>
+            </div>
+        </div>
+        <div class="fb-comments" data-href="http://localhost:8000/{{post.get_absolute_url}}" data-numposts="5"
+            data-width="600">
+        </div>
+    </div>
+    </div>
+</section>
+
+{% endblock body %}
