@@ -26,11 +26,11 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name='blog_posts')
 
     title = models.CharField(max_length=250, verbose_name='title')
-    description = models.TextField(max_length=...)
+    description = models.TextField(null=True, blank=True)
     thumbnail = models.ImageField(
         upload_to='blog/thumbnails/', blank=True, null=True)
     slug = models.SlugField(max_length=250, unique_for_date='publish')
-    body = models.TextField(null=True, blank=True)
+    body = models.TextField()
 
     objects = models.Manager()
     draft = DraftManager()
