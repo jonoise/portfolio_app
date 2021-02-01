@@ -22,6 +22,8 @@ class Post(models.Model):
         ('draft', 'Draft'),
         ('published', 'Published'),
     )
+    visited = models.BigIntegerField(
+        verbose_name='visited', blank=True, null="True", default=0)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='blog_posts')
 
