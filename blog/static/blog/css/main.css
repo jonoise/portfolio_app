@@ -69,6 +69,7 @@ img {
 }
 
 
+
 /* BLOG - TITLE */
 
 .blog_drig .blog_title h1 {
@@ -113,6 +114,13 @@ img {
     font-size: 15px;
     font-weight: 300;
     text-align: center;
+    color: var(--main_font_color);
+}
+
+.sidebar_post small {
+    text-align: center;
+    font-size: 10px;
+    color: var(--main_font_color);
 }
 
 .recent_posts h3,
@@ -121,37 +129,10 @@ img {
     color: var(--font_color);
 }
 
-
-
-.recent_posts a {
-    position: relative;
+.sidebar_post:hover {
+    background-color: var(--sec_color);
+    color: var(--sec_font_color);
 }
-
-.recent_posts a span {
-    display:block;
-    position:absolute;
-    background: chartreuse;
-}
-
-
-/* POST DETAIL VIEW */
-
-.grid_post {
-    min-height: 40em;
-    display: grid;
-    grid-template-areas: 
-        "thumbnail sidebar"
-        "body sidebar"
-        "pagination sidebar"
-    ;
-
-    /*grid gaps*/
-    column-gap: 20px;
-
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr 100px;   
-}
-
 
 /* UTILITIES */
 

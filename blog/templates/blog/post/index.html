@@ -51,23 +51,27 @@
         </div>
         <div class="blog_right_column">
             <div class="recent_posts">
-                <h3>Most Visited Posts&#128293;</h3>
-                <a href="#">
+                <h3>Posts más vistos&#128293;</h3>
+                {% for most_visited in most_visited %}
+                <a href="{{most_visited.get_absolute_url}}">
                     <div class="sidebar_post">
-                        <p>Post Title</p>
-                        <p>Post Tags</p>
-                        <p>Post date</p>
+                        <p>{{most_visited.title.title}}</p>
+                        <p>{{most_visited.publish|date:'M d, Y'}}</p>
+                        <small>{{most_visited.tags.all|join:', '}}</small>
                     </div>
                 </a>
+                {% endfor %}
 
             </div>
             <div class="hottest_topics">
                 <h3>Main Topics&#11088;</h3>
-                <a href="#">
+                {% for tag in most_tags %}
+                <a href="{% url 'blog:posts_by_tag' tag.slug %}">
                     <div class="sidebar_post">
-                        <p>Post Title</p>
+                        <p>{{tag.name.title}}</p>
                     </div>
                 </a>
+                {% endfor %}
             </div>
         </div>
     </div>

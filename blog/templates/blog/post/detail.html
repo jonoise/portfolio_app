@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
 {% endblock %}
 
-{% block title %}{{post.title}}{% endblock title %}
+{% block title %} Late Night Blog - {{post.title}}{% endblock title %}
 
 
 {% block body %}
@@ -29,22 +29,38 @@
         <div class="blog_right_column">
             <div class="sidebar">
                 <div class="recent_posts">
-                    <h3>Most Visited Posts&#128293;</h3>
-                    <a href="#">
+                    <h3>Posts más vistos&#128293;</h3>
+                    {% for most_visited in most_visited %}
+                    <a href="{{most_visited.get_absolute_url}}">
                         <div class="sidebar_post">
-                            <p>Post Title</p>
-                            <p>Post Tags</p>
-                            <p>Post date</p>
+                            <p>{{most_visited.title.title}}</p>
+                            <p>{{most_visited.publish|date:'M d, Y'}}</p>
+                            <small>{{most_visited.tags.all|join:', '}}</small>
                         </div>
                     </a>
+                    {% endfor %}
                 </div>
                 <div class="hottest_topics">
-                    <h3>Main Topics&#11088;</h3>
-                    <a href="#">
+                    <h3>Post similares&#11088;</h3>
+                    {% for similar_post in similar_posts %}
+                    <a href="{{similar_post.get_absolute_url}}">
                         <div class="sidebar_post">
-                            <p>Post Title</p>
+                            <p>{{similar_post.title.title}}</p>
+                            <p>{{similar_post.publish|date:'M d, Y'}}</p>
+                            <small>{{similar_post.tags.all|join:', '}}</small>
                         </div>
                     </a>
+                    {% endfor %}
+                </div>
+                <div class="hottest_topics">
+                    <h3>Main Topics&#127769;</h3>
+                    {% for tag in most_tags %}
+                    <a href="{% url 'blog:posts_by_tag' tag.slug %}">
+                        <div class="sidebar_post">
+                            <p>{{tag.name.title}}</p>
+                        </div>
+                    </a>
+                    {% endfor %}
                 </div>
             </div>
         </div>
