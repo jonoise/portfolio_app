@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth.models import User
 from taggit.managers import TaggableManager
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -32,7 +33,7 @@ class Post(models.Model):
     thumbnail = models.ImageField(
         upload_to='blog/thumbnails/', blank=True, null=True, default="/blog/default_blog.jpg")
     slug = models.SlugField(max_length=250, unique_for_date='publish')
-    body = models.TextField()
+    body = RichTextField(null=True, blank=True)
 
     objects = models.Manager()
     draft = DraftManager()
