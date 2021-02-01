@@ -11,36 +11,40 @@
 {% block body %}
 {% include 'frontend/navbar.html' %}
 <section class="blog">
-    <div class="container grid_post">
-        <div class="post_cover">
-            <img src="{{ post.thumbnail.url }}" alt="">
-            <div class="title">
-                <h1>{{post.title.title}}</h1>
-                <h5>escrito por <a href="{% url 'frontend:index' %}">{{post.author.first_name}}
-                        {{post.author.last_name}}</a>. Publicado:
-                    {{post.publish|date:'M d, Y'}}</h5>
+    <div class="container blog_drig">
+        <div class="blog_left_column">
+            <div class="post_cover">
+                <img src="{{ post.thumbnail.url }}" alt="">
+                <div class="title">
+                    <h1>{{post.title.title}}</h1>
+                    <h5>escrito por <a href="{% url 'frontend:index' %}">{{post.author.first_name}}
+                            {{post.author.last_name}}</a>. Publicado:
+                        {{post.publish|date:'M d, Y'}}</h5>
+                </div>
+            </div>
+            <div class="post_body">
+                <p>{{post.body}}</p>
             </div>
         </div>
-        <div class="sidebar">
-            <div class="recent_posts">
-                <h3>Recemt Posts</h3>
-                <ul>
-                    <li>Qué es un proxy model?</li>
-                    <li>Empezando con Linux. Un viaje a UNIX.</li>
-                    <li>Django, el framework para perfeccionistas.</li>
-                </ul>
+        <div class="blog_right_column">
+            <div class="sidebar">
+                <div class="recent_posts">
+                    <h3>Recemt Posts</h3>
+                    <ul>
+                        <li>Qué es un proxy model?</li>
+                        <li>Empezando con Linux. Un viaje a UNIX.</li>
+                        <li>Django, el framework para perfeccionistas.</li>
+                    </ul>
+                </div>
+                <div class="hottest_topics">
+                    <h3>Hottest Topics</h3>
+                    <ul>
+                        <li>Python asd asdas dasd asdas asdasdads</li>
+                        <li>Django</li>
+                        <li>HTML</li>
+                    </ul>
+                </div>
             </div>
-            <div class="hottest_topics">
-                <h3>Hottest Topics</h3>
-                <ul>
-                    <li>Python asd asdas dasd asdas asdasdads</li>
-                    <li>Django</li>
-                    <li>HTML</li>
-                </ul>
-            </div>
-        </div>
-        <div class="post_body">
-            <p>{{post.body}}</p>
         </div>
     </div>
 </section>

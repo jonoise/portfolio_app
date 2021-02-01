@@ -45,64 +45,96 @@ img {
 
 
 /* GRID PROPORTIONS */
-.grid_blog {
-    min-height: 40em;
-    display: grid;
+
+
+.blog_drig {
+    height: auto;
+    overflow: visible;
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+
     grid-template-areas: 
-        "header header"
-        "body sidebar"
-        "pagination sidebar"
+        "left right"
     ;
 
-    /*grid gaps*/
     column-gap: 20px;
-
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 100px 1fr 100px;   
 }
 
-.grid_blog .blog_title {
-    grid-area: "header";
-    grid-column: span 2;
+.blog_left_column {
+    grid-area: "left";
 }
 
-.grid_blog .body {
-    grid-area: "body";
-    grid-row: span 1;
+.blog_right_column {
+    grid-area: "right";
 }
 
-.grid_blog .sidebar {
-    grid-area: "sidebar";
-
-}
-
-.grid_blog .pagination {
-    grid-area: "pagination";
-}
 
 /* BLOG - TITLE */
 
-.grid_blog .blog_title h1 {
+.blog_drig .blog_title h1 {
     font-size: 36px;
 }
 
 /* BLOG - POST CARD */
 
-.body .post_card {
+.post_card {
     border: 2px solid var(--border_color);
     margin-bottom: 20px;
     padding: 20px;
 }
 
-.body .post_card .post_card_title:hover {
+.pagination {
+    border: 2px dashed var(--border_color);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.post_card .post_card_title:hover {
     color:red;
 }
 
-.body .post_card .tags, .description, .card_title, .small {
+.post_card .tags, .description, .card_title, .small {
     margin: 10px 0;
 }
 
-/* DETAIL */
+/* SIDEBAR */
+
+.sidebar_post{
+    border: 2px solid var(--border_color);
+    margin-bottom: 20px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar_post p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.recent_posts h3,
+.hottest_topics h3 {
+    margin-bottom: 20px;
+    color: var(--font_color);
+}
+
+
+
+.recent_posts a {
+    position: relative;
+}
+
+.recent_posts a span {
+    display:block;
+    position:absolute;
+    background: chartreuse;
+}
+
+
+/* POST DETAIL VIEW */
 
 .grid_post {
     min-height: 40em;
@@ -120,6 +152,7 @@ img {
     grid-template-rows: 1fr 1fr 100px;   
 }
 
+
 /* UTILITIES */
 
 .blog {
@@ -133,8 +166,25 @@ img {
 
 }
 
-.grid_blog .flex {
-    flex-direction: column;
-    justify-content:flex-start;
-    align-items: start;
+
+/* Tablets and under */
+@media (max-width: 768px){
+    .blog_drig {
+        min-height: 40em;
+        display: grid;
+        grid-template-areas: 
+            "left"
+            "right"
+        ;
+    
+        /*grid gaps*/
+        column-gap: 20px;
+    
+        grid-template-columns: 1fr;  
+    }
+}
+
+/* Tablets and under */
+@media (max-width: 500px){
+    
 }
