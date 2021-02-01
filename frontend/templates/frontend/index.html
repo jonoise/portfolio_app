@@ -1,6 +1,6 @@
 {% extends 'frontend/base.html' %}
-
 {% load static %}
+{% load widget_tweaks %}
 
 {% block title %}Amilkar Munoz - Jr. Full Stack Developer{% endblock title %}
 
@@ -82,5 +82,32 @@
     </div>
 </section>
 {% include 'frontend/projects.html' %}
-{% include 'frontend/contact_form.html' %}
+<section class="contact">
+    <div class="container flex">
+        <div class="contact-form">
+            <h1>CONTACT</h1>
+            <p>Déjame un mensaje para saber que estuviste por aquí! Será un gusto leerte. :)</p>
+            <div class="card">
+                <form method="POST">
+                    {% csrf_token %}
+                    <!--1 form control div f/e input
+                        and add the margindesired-->
+                    <div class="form-control">
+                        {% render_field form.name placeholder="Nombre" %}
+                    </div>
+                    <div class="form-control">
+                        {% render_field form.email placeholder="Email" %}
+                    </div>
+                    <div class="form-control">
+                        {% render_field form.subject placeholder="Título" %}
+                    </div>
+                    <div class="form-control">
+                        {% render_field form.message rows="10" placeholder="Título" class="textarea" %}
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock body %}

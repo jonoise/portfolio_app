@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'frontend.apps.FrontendConfig',
     # 3RD PARTY
     'taggit',
+    'widget_tweaks',
+    'ckeditor',
     # DJANGO APPS
     'django.contrib.admin',
     'django.contrib.auth',
@@ -145,3 +147,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # TAGGIT case-insensitive setting
 TAGGIT_CASE_INSENSITIVE = True
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.getenv('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': "100%",
+    }
+}

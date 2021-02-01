@@ -1,0 +1,15 @@
+{% extends 'frontend/base.html' %}
+
+{% block title %}NEW POST{% endblock title %}
+{% block body %}
+<div class="container">
+    <form class="new_form" method="POST" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {{form.media}}
+        {{form.as_p}}
+        <input class="btn btn-primary" type="submit" value="Publicar">
+    </form>
+
+</div>
+
+{% endblock body %}

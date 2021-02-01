@@ -1,8 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.db.models import Count
+from django.contrib.auth.decorators import login_required
 
 from .models import Post
-from django.views.generic import ListView, DetailView, UpdateView, DeleteView
+from .forms import NewPost
+
 from taggit.models import Tag
 
 
@@ -75,3 +77,26 @@ def post_detail(request, year, month, day, slug):
         'most_tags': most_tags,
     }
     return render(request, 'blog/post/detail.html', context)
+
+@login_required
+def post_new(request):
+    form = NewPost(initial={'author':request.user})
+    if request.method == 'POST':
+        form = NewPost(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+        return redirect('blog:index')
+
+    return render(request, 'blog/post/new.html', {'form':form})
+
+@login_required
+def post_edit(request, pk):
+    post = Post.objects.get(pk=pk)
+    form = NewPost(instance=post)
+    if request.method == 'POST':
+        form = NewPost(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+        return redirect('blog:index')
+
+    return render(request, 'blog/post/new.html', {'form':form})

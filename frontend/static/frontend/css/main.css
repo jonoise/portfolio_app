@@ -324,6 +324,17 @@ input:focus {
     color: var(--font_color);
 }
 
+/*NEW FORM*/
+
+.new_form {
+    margin: 50px 0;
+}
+
+/*PAGINATION*/
+
+.step-links a {
+    color:red;
+}
 
 /* Utilities */
 .container {

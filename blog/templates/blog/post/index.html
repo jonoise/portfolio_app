@@ -43,6 +43,9 @@
                     {% endfor %}
                 </div>
                 <small class="small">Publicado: {{post.publish|date:'M d, Y'}}</small>
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'blog:post_edit' post.pk %}">Editar</a>
+                {% endif %}
             </div>
             {% endfor %}
             <div class=pagination>
