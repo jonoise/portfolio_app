@@ -82,31 +82,5 @@
     </div>
 </section>
 {% include 'frontend/projects.html' %}
-<section class="contact">
-    <div class="container flex">
-        <div class="contact-form">
-            <h1>CONTACT</h1>
-            <p>Déjame un mensaje para saber que estuviste por aquí! Será un gusto leerte. :)</p>
-            <div class="card">
-                <form>
-                    <!--1 form control div f/e input
-                        and add the margindesired-->
-                    <div class="form-control">
-                        <input type="text" name="name" placeholder="Nombre">
-                    </div>
-                    <div class="form-control">
-                        <input type="text" name="email" placeholder="Email">
-                    </div>
-                    <div class="form-control">
-                        <input type="text" name="subject" placeholder="Título">
-                    </div>
-                    <div class="form-control">
-                        <textarea class="textarea" type="text" name="message" placeholder="Mensaje"></textarea>
-                    </div>
-                    <input class="btn btn-primary" type="submit" value="Enviar">
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+{% include 'frontend/contact_form.html' %}
 {% endblock body %}
