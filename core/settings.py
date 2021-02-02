@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'taggit',
     'widget_tweaks',
     'ckeditor',
-    'storages',
     # DJANGO APPS
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -169,8 +169,8 @@ CKEDITOR_CONFIGS = {
 
 # AWS CREDENTIALS
 
-AWS_ACCESS_KEY_ID = 'AKIA2BT2UEHRSROJ5NVH'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'amilkarmediafiles'
 
 AWS_FILE_OVERWRITE = False
