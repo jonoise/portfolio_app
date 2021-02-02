@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-import django_heroku
 
 load_dotenv()
 
@@ -217,5 +216,3 @@ AWS_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = ''
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-django_heroku.settings(locals())
