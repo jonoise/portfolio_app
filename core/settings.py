@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = "x2&myowwyo5eqbej+$7+7k9llpx@y02bq5^(pd^q4)u9wtk5#i"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -169,11 +169,11 @@ CKEDITOR_CONFIGS = {
 
 # AWS CREDENTIALS
 
-AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_ACCESS_KEY_ID = 'AKIA2BT2UEHRSROJ5NVH'
+AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'amilkarmediafiles'
 
 AWS_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = ''
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
