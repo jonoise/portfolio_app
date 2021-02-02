@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
 {% endblock %}
 
-{% block title %}Blog - Posts{% endblock title %}
+{% block title %}Late Night Blog - Posts - by Amilkar Munoz{% endblock title %}
 
 {% block body %}
 {% include 'frontend/navbar.html' %}
@@ -42,7 +42,8 @@
                     {% endif %}
                     {% endfor %}
                 </div>
-                <small class="small">Publicado: {{post.publish|date:'M d, Y'}}</small>
+                <small class="small">Publicado: {{post.publish|date:'M d, Y'}} por {{post.author.first_name}}
+                    {{post.author.last_name}}</small>
                 {% if request.user.is_authenticated %}
                 <a href="{% url 'blog:post_edit' post.pk %}">Editar</a>
                 {% endif %}

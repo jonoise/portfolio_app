@@ -1,3 +1,4 @@
 djangofolio/
 .env
 snippets.txt
+**/__pycache__

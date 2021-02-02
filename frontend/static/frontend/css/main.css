@@ -266,6 +266,10 @@ nav {
     margin:0;
 }
 
+.description a{
+    color:red
+}
+
 .grid-card .tags {
     padding: 0 5px;
 }
@@ -510,6 +514,15 @@ input:focus {
     .description p {
         line-height: 1.1;
         font-size: 16px;
+    }
+
+    .languages_layout .links {
+        border: 1px dashed var(--border_color);
+        padding: 5px;
+    }
+
+    .languages_layout .links p{ 
+        font-size: 14px;
     }
 
   }
