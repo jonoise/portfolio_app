@@ -60,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -138,8 +139,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Para que Django busque en cada aplicacion por su static respectivo.
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "/blog/static/"),
-    os.path.join(BASE_DIR, "/frontend/static/"),
+    os.path.join(BASE_DIR, "blog/static"),
+    os.path.join(BASE_DIR, "frontend/static"),
 ]
 
 MEDIA_URL = '/media/'
@@ -175,4 +176,4 @@ AWS_STORAGE_BUCKET_NAME = 'amilkarmediafiles'
 AWS_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = ''
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
