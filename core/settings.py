@@ -176,4 +176,4 @@ AWS_STORAGE_BUCKET_NAME = 'amilkarmediafiles'
 AWS_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = ''
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
