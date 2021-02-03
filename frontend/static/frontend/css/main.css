@@ -471,7 +471,7 @@ input:focus {
 
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     .navbar {
         height: 220px;
     }
@@ -524,5 +524,30 @@ input:focus {
     .languages_layout .links p{ 
         font-size: 14px;
     }
+    .contact-form {
+        padding: 10px;
+    }
 
+  }
+
+
+  @media (max-width: 400px) {
+      .personal .links p {
+          font-size: 8px;
+      }
+
+      .grid-card p {
+          font-size: 14px;
+      }
+      .grid-card .tags {
+          font-size: 10px;
+      }
+      .navbar li{
+        font-size:8px;
+      }
+
+      
+    .contact-form {
+        padding: 10px;
+    }
   }
