@@ -8,6 +8,6 @@
         Página {{ page.number }} de {{ page.paginator.num_pages }}.
     </span>
     {% if page.has_next %}
-    <a href="?page={{ int(page.next_page_number) }}">Next</a>
+    <a href="?page={{ page.next_page_number }}">Next</a>
     {% endif %}
 </span>
