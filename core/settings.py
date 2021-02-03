@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+from sentry_sdk.integrations.django import DjangoIntegration
+import sentry_sdk
 from pathlib import Path
 import os
 from dotenv import load_dotenv
@@ -204,6 +206,17 @@ LOGGING = {
         },
     }
 }
+
+
+sentry_sdk.init(
+    dsn="https://6bad52b77b2b401889664f1bc4a37423@o515468.ingest.sentry.io/5620334",
+    integrations=[DjangoIntegration()],
+    traces_sample_rate=1.0,
+
+    # If you wish to associate users to errors (assuming you are using
+    # django.contrib.auth) you may enable sending PII data.
+    send_default_pii=True
+)
 
 
 # AWS CREDENTIALS
