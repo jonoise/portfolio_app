@@ -27,11 +27,11 @@ def post_list(request, tag_slug=None):
     paginator = Paginator(posts, 3)
     page = request.GET.get('page')
     try:
-        posts = paginator.page(page)
+        posts = paginator.page(int(page))
     except PageNotAnInteger:
         posts = paginator.page(1)
     except EmptyPage:
-        posts = paginator.page(paginator.num_pages)
+        posts = paginator.page(int(paginator.num_pages))
 
     context = {
         'page': page,
@@ -78,16 +78,18 @@ def post_detail(request, year, month, day, slug):
     }
     return render(request, 'blog/post/detail.html', context)
 
+
 @login_required
 def post_new(request):
-    form = NewPost(initial={'author':request.user})
+    form = NewPost(initial={'author': request.user})
     if request.method == 'POST':
         form = NewPost(request.POST, request.FILES)
         if form.is_valid():
             form.save()
         return redirect('blog:index')
 
-    return render(request, 'blog/post/new.html', {'form':form})
+    return render(request, 'blog/post/new.html', {'form': form})
+
 
 @login_required
 def post_edit(request, pk):
@@ -99,4 +101,4 @@ def post_edit(request, pk):
             form.save()
         return redirect('blog:index')
 
-    return render(request, 'blog/post/new.html', {'form':form})
+    return render(request, 'blog/post/new.html', {'form': form})
