@@ -27,11 +27,11 @@ def post_list(request, tag_slug=None):
     paginator = Paginator(posts, 3)
     page = request.GET.get('page')
     try:
-        posts = paginator.page(int(page))
+        posts = paginator.page(page)
     except PageNotAnInteger:
         posts = paginator.page(1)
     except EmptyPage:
-        posts = paginator.page(int(paginator.num_pages))
+        posts = paginator.page(paginator.num_pages)
 
     context = {
         'page': page,
