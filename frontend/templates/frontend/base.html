@@ -24,6 +24,9 @@
     {% block body %}
     <!--BODY-->
     {% endblock body %}
+    <script type="text/javascript">
+        let static = "{% static 'frontend/css' %}"
+    </script>
     <script type="text/javascript" src="{% static 'frontend/js/main.js' %}"></script>
 </body>
 

@@ -4,8 +4,6 @@ let logos = document.querySelectorAll("img");
 
 let theme = localStorage.getItem("blog_theme");
 
-let static = "{% static 'frontend/css' %}";
-
 if (theme == "secondary") {
   document.getElementById("theme-style").href = static + "/secondary.css";
   chk.click();
