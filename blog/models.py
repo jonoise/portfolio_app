@@ -1,10 +1,10 @@
 from django.db import models
 from django.urls import reverse
-from django.utils import timezone
 from django.contrib.auth.models import User
 from taggit.managers import TaggableManager
 from ckeditor.fields import RichTextField
 
+import datetime as dt
 # Create your models here.
 
 
@@ -40,7 +40,7 @@ class Post(models.Model):
     published = PublishedManager()
     tags = TaggableManager()
 
-    publish = models.DateTimeField(default=timezone.now)
+    publish = models.DateTimeField(default=dt.datetime.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(
