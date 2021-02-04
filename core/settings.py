@@ -154,7 +154,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # TAGGIT case-insensitive setting
 TAGGIT_CASE_INSENSITIVE = True
 
-
+EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
 EMAIL_HOST = 'smtp.mailgun.org'
 MAILGUN_SMTP_LOGIN = os.getenv('MAILGUN_SMTP_LOGIN')
 MAILGUN_SMTP_PASSWORD = os.getenv('MAILGUN_SMTP_PASSWORD')
