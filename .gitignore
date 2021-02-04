@@ -2,3 +2,6 @@ djangofolio/
 .env
 snippets.txt
 **/__pycache__
+heroku.crt
+server.crt
+server.key
