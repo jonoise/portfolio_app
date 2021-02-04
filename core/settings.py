@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'amilkar.dev', 'www.amilkar.com']
+ALLOWED_HOSTS = ['localhost', 'amilkar.dev', 'www.amilkar.dev']
 
 
 # Application definition
