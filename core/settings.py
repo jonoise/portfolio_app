@@ -150,7 +150,7 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-CKEDITOR_UPLOAD_PATH = "uploads/"
+
 
 # TAGGIT case-insensitive setting
 TAGGIT_CASE_INSENSITIVE = True
@@ -163,7 +163,9 @@ EMAIL_PORT = 465
 EMAIL_USE_TLS = True
 EMAIL_USER_SSL = True
 
-
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
