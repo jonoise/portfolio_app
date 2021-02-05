@@ -134,6 +134,14 @@ img {
     color: var(--sec_font_color);
 }
 
+/* BLOG POST BODY */
+
+.post_body p {
+    font-weight: 300;
+    font-family: arial;
+}
+
+
 /* UTILITIES */
 
 .blog {
@@ -167,7 +175,11 @@ img {
 
 /* Tablets and under */
 @media (max-width: 500px){
+    .post_body p {
+        font-size: 16px;
+    }
     .post_body .post_image {
+        margin-top: 40px;
         width: 100%;
         height: auto;
     }
