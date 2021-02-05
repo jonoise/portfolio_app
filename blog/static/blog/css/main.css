@@ -141,7 +141,8 @@ img {
 /* BLOG POST BODY */
 
 .post_body a{
-    padding: 50px;
+    color: tomato;
+    font-family: var(--font_family);
 }
 
 .post_body h1{
