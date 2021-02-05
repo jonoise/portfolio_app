@@ -213,7 +213,7 @@ img {
 @media (max-width: 500px){
 
     .post_body p {
-        font-size: 24px;
+        font-size: 20px;
     }
     .post_body .post_image {
         margin-top: 40px;
@@ -245,7 +245,7 @@ img {
 
 @media (max-width: 375px) {
     .personal .links p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .grid-card p {
