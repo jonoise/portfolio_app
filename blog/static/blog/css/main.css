@@ -147,6 +147,77 @@ img {
 
 }
 
+@media (max-width: 1024px) {
+    body p {
+        font-size: 25px;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .projects {
+        height: auto;
+    }
+    /* NAVBAR */
+    .navbar {
+        height: 220px;
+    }
+    
+    .navbar h2 {
+        font-size: 18px;
+        position: relative;
+        top: 10px;
+    }
+
+    .navbar .switch {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar li{
+        font-size: 25px;
+        white-space: nowrap;
+
+    }
+    
+    .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+
+  
+    .personal {
+      height: auto;
+    }
+
+    
+    .info_layout{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+ 
+
+    .my_journey {
+        grid-area: "c";
+        grid-column: span 2;
+        border: 1px solid var(--border_color);
+        padding: 5px;
+    }
+
+    .my_journey p {
+        line-height: 1.5;
+    }
+
+    .contact p {
+        font-weight: 400;
+        font-size: 25px;
+        color: gray
+    }
+
+  }
+
+
 
 /* Tablets and under */
 @media (max-width: 768px){
@@ -163,9 +234,23 @@ img {
     
         grid-template-columns: 1fr;  
     }
+    
+    .projects .container {
+        padding: 0 10px;
+    }
+    .projects .grid-3 {
+        padding: 10px;
+       }
+
 }
 
 /* Tablets and under */
 @media (max-width: 500px){
-    
+    .post_body .youtube_video {
+        width: 450px;
+        height: 225px;
+    }
+    .container {
+        padding: 10px;
+    }
 }
