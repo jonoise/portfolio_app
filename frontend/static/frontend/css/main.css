@@ -400,25 +400,31 @@ input:focus {
     border: 1px solid rgba(0,0,0,0)
 }
 
+/* Tablets and under */
 @media (max-width: 1024px) {
     body p {
-        font-size: 25px;
+        font-size: 24px;
     }
 
-    .grid-3 {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
 
     .projects {
         height: auto;
     }
+
+    .projects p {
+        font-size:22px;
+    }
+
+    .projects .tags {
+        font-size:28px;
+    }
     /* NAVBAR */
     .navbar {
-        height: 220px;
+        height: 250px;
     }
     
     .navbar h2 {
-        font-size: 18px;
+        font-size: 28px;
         position: relative;
         top: 10px;
     }
@@ -429,89 +435,13 @@ input:focus {
     }
 
     .navbar li{
-        font-size: 25px;
+        font-size: 24px;
         white-space: nowrap;
 
     }
     
-    .grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-    }
-
-  
-    .personal {
-      height: auto;
-    }
-
-    .grid-card .description p{
-        font-size: 25px;
-    }
-
-    .grid-card .tags {
-        font-size: 22px;
-    }
-    
-    .info_layout{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
- 
-
-    .my_journey {
-        grid-area: "c";
-        grid-column: span 2;
-        border: 1px solid var(--border_color);
-        padding: 5px;
-    }
-
-    .my_journey p {
-        line-height: 1.5;
-    }
-
-    .contact p {
-        font-weight: 400;
-        font-size: 25px;
-        color: gray
-    }
-
-  }
-
-
-/* Tablets and under */
-@media (max-width: 768px) {
-    body p {
-        font-size: 19px;
-    }
-
-    .grid-3 {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .projects {
-        height: auto;
-    }
-    /* NAVBAR */
-    .navbar {
-        height: 220px;
-    }
-    
-    .navbar h2 {
-        font-size: 18px;
-        position: relative;
-        top: 10px;
-    }
-
-    .navbar .switch {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .navbar li{
-        font-size: 16px;
-        white-space: nowrap;
-    }
-    
+    /*modifica el portfolio TODO: revisar.*/
+    /*se repite en el 768*/
     .grid {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
@@ -526,6 +456,15 @@ input:focus {
     .info_layout{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+
+    .languages_layout .title {
+        font-size: 28px;
+    }
+
+    .languages_layout .links {
+        padding: 0 60px;
+        border: 2px dashed var(--border_color);
     }
  
 
@@ -548,29 +487,58 @@ input:focus {
 
   }
 
-  @media (max-width: 650px) {
+@media (max-width: 768px) {
+
+    .grid-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .projects {
+        height: auto;
+    }
+
+    /* NAVBAR */
     .navbar {
         height: 220px;
     }
-
-    .navbar .switch {
-        display: flex;
-        flex-direction: column;
+    .navbar h2 {
+        font-size: 18px;
+    }
+    
+    .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
     }
 
-    .navbar li{
-        font-size: 10px;
-        white-space: nowrap;
+  
+    .personal {
+      height: auto;
+    }
+ 
+
+    .my_journey {
+        grid-area: "c";
+        grid-column: span 2;
+        border: 1px solid var(--border_color);
+        padding: 5px;
     }
 
+    .my_journey p {
+        line-height: 1.5;
+    }
+
+    .contact p {
+        font-weight: 400;
+        font-size: 11px;
+        color: gray
+    }
+    
     .info_layout{
         grid-template-areas: 
             "a"
             "b"
             "c"
         ;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
     }
 
     /* MY JOURNEY */
@@ -584,13 +552,9 @@ input:focus {
         padding: 5px;
     }
 
-    .info_layout {
-        padding:0;
-    }
-
     .description p {
         line-height: 1.1;
-        font-size: 16px;
+        font-size: 19px;
     }
 
     .languages_layout .links {
@@ -605,10 +569,65 @@ input:focus {
         padding: 10px;
     }
 
+    .projects .container {
+        padding: 0;
+    }
+
+    .languages_layout .links {
+        padding: 0 60px;
+    }
+
+
   }
+
+@media (max-width: 650px) {    
+
+    .navbar {
+    height: 220px;
+    padding: 10px
+    }
+
+    .navbar li{
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    /* MY JOURNEY */
+    .container {
+        padding: 10px;
+    }
+    .my_journey p{
+        font-weight: 300;
+        font-size: 18px;
+    }
+
+    .description p {
+        font-size: 16px;
+    }
+    .languages_layout 
+
+    .languages_layout .links p{ 
+        font-size: 16px;
+    }
+    .languages_layout .links {
+        padding: 0 14px;
+        margin: 0 20px;
+    }
+    .grid-card .tags {
+        font-size: 14px;
+    }
+}
+
 
 
   @media (max-width: 400px) {
+    .container {
+        padding:0;
+    }
+    .info_layout p {
+        font-size: 12px;
+    }
+
       .personal .links p {
           font-size: 8px;
       }
@@ -617,22 +636,9 @@ input:focus {
           font-size: 14px;
       }
       .grid-card .tags {
-          display:flex;
-          align-items: center;
           font-size: 10px;
       }
       .navbar li{
         font-size:8px;
       }
-      
-    .contact-form {
-        padding: 10px;
     }
-
-    .projects .container {
-        padding: 0
-    }
-    .grid-card .description p{
-        font-size: 14px;
-    }
-  }

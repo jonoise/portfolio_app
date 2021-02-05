@@ -163,18 +163,6 @@ img {
     
         grid-template-columns: 1fr;  
     }
-    
-    .projects .container {
-        padding: 0 10px;
-    }
-    .projects .grid-3 {
-        padding: 10px;
-       }
-       .navbar li{
-        font-size: 16px;
-        white-space: nowrap;
-    }
-
 }
 
 /* Tablets and under */
@@ -223,4 +211,8 @@ img {
   .grid-card .description p{
       font-size: 14px;
   }
+  .post_body .youtube_video {
+    width: 350px;
+    height: 200px;
+}
 }
