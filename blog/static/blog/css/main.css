@@ -181,6 +181,7 @@ img {
 @media (max-width: 500px){
     .post_body p {
         font-size: 16px;
+        padding: 0 10px;
     }
     .post_body .post_image {
         margin-top: 40px;
