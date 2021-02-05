@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'taggit',
     'widget_tweaks',
     'ckeditor',
+    'ckeditor_uploader',
     # DJANGO APPS
     'django.contrib.admin',
     'django.contrib.auth',
@@ -149,7 +150,7 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 # TAGGIT case-insensitive setting
 TAGGIT_CASE_INSENSITIVE = True

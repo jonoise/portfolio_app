@@ -147,77 +147,6 @@ img {
 
 }
 
-@media (max-width: 1024px) {
-    body p {
-        font-size: 25px;
-    }
-
-    .grid-3 {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .projects {
-        height: auto;
-    }
-    /* NAVBAR */
-    .navbar {
-        height: 220px;
-    }
-    
-    .navbar h2 {
-        font-size: 18px;
-        position: relative;
-        top: 10px;
-    }
-
-    .navbar .switch {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .navbar li{
-        font-size: 25px;
-        white-space: nowrap;
-
-    }
-    
-    .grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-    }
-
-  
-    .personal {
-      height: auto;
-    }
-
-    
-    .info_layout{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
- 
-
-    .my_journey {
-        grid-area: "c";
-        grid-column: span 2;
-        border: 1px solid var(--border_color);
-        padding: 5px;
-    }
-
-    .my_journey p {
-        line-height: 1.5;
-    }
-
-    .contact p {
-        font-weight: 400;
-        font-size: 25px;
-        color: gray
-    }
-
-  }
-
-
 
 /* Tablets and under */
 @media (max-width: 768px){
@@ -241,11 +170,20 @@ img {
     .projects .grid-3 {
         padding: 10px;
        }
+       .navbar li{
+        font-size: 16px;
+        white-space: nowrap;
+    }
 
 }
 
 /* Tablets and under */
 @media (max-width: 500px){
+    .post_body .post_image {
+        width: 100%;
+        height: auto;
+    }
+
     .post_body .youtube_video {
         width: 450px;
         height: 225px;
@@ -253,4 +191,36 @@ img {
     .container {
         padding: 10px;
     }
+
+    .navbar li{
+        font-size: 9.5px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 375px) {
+    .personal .links p {
+        font-size: 8px;
+    }
+
+    .grid-card p {
+        font-size: 14px;
+    }
+    .grid-card .tags {
+        display:flex;
+        align-items: center;
+        font-size: 10px;
+    }
+    .navbar li{
+      font-size:8px;
+    }
+    
+  .contact-form {
+      padding: 10px;
+  }
+
+  
+  .grid-card .description p{
+      font-size: 14px;
+  }
 }

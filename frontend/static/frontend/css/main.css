@@ -444,6 +444,13 @@ input:focus {
       height: auto;
     }
 
+    .grid-card .description p{
+        font-size: 25px;
+    }
+
+    .grid-card .tags {
+        font-size: 22px;
+    }
     
     .info_layout{
         grid-template-columns: 1fr 1fr;
@@ -503,7 +510,6 @@ input:focus {
     .navbar li{
         font-size: 16px;
         white-space: nowrap;
-
     }
     
     .grid {
@@ -611,6 +617,8 @@ input:focus {
           font-size: 14px;
       }
       .grid-card .tags {
+          display:flex;
+          align-items: center;
           font-size: 10px;
       }
       .navbar li{
@@ -619,5 +627,12 @@ input:focus {
       
     .contact-form {
         padding: 10px;
+    }
+
+    .projects .container {
+        padding: 0
+    }
+    .grid-card .description p{
+        font-size: 14px;
     }
   }
