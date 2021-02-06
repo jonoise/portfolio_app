@@ -239,8 +239,9 @@ nav {
     height: 490px;
 }
 
-.projects h1 {
-    font-size: 56px;
+.projects h3 {
+    font-size: 28px;
+    text-align: center;
 }
 
 .projects .grid-3 {
@@ -282,8 +283,8 @@ nav {
 
 }
 
-.contact h1 {
-    font-size: 56px;
+.contact h3 {
+    font-size: 28px;
     text-align: center;
 }
 
@@ -406,9 +407,13 @@ input:focus {
         font-size: 24px;
     }
 
+    .personal .lang {
+        margin-bottom: 20px;
+    }
 
     .projects {
         height: auto;
+        margin-top: 20px;
     }
 
     .projects p {
@@ -627,9 +632,14 @@ input:focus {
     .info_layout p {
         font-size: 12px;
     }
+    
 
       .personal .links p {
           font-size: 8px;
+      }
+
+      .personal .links {
+          margin: 20px 0;
       }
 
       .grid-card p {
@@ -641,4 +651,13 @@ input:focus {
       .navbar li{
         font-size:8px;
       }
+    }
+
+    @media (max-width: 330px) {
+        .grid-card p {
+            font-size: 13px;
+        }
+        .navbar li{
+          font-size:6px;
+        }
     }

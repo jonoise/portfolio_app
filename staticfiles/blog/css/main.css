@@ -253,7 +253,7 @@ img {
     }
 
     .grid-card p {
-        font-size: 14px;
+        font-size: 13px;
     }
     .grid-card .tags {
         display:flex;
@@ -265,10 +265,6 @@ img {
       font-size:8px;
     }
   
-    .grid-card .description p{
-      font-size: 14px;
-    }
-    
     /* VIDEO 375*/
     .post_body .youtube_video {
     width: 298px;
