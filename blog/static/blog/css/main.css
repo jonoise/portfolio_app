@@ -27,6 +27,10 @@ a {
     color: var(--font_color);
 }
 
+ul {
+    list-style-type: none;
+}
+
 h1, h2 {
     font-weight: 300;
     line-height: 1;
@@ -209,11 +213,6 @@ img {
         width: 620px;
         height: 398px;
     }
-    .post_body .post_image {
-        margin-top: 60px;
-        width: 620px;
-        height: auto;
-    }
 }
 
 /* Tablets and under */
@@ -225,11 +224,7 @@ img {
     .post_body p {
         font-size: 20px;
     }
-    .post_body .post_image {
-        margin-top: 60px;
-        width: 408px;
-        height: auto;
-    }
+
     .post_body img {
         margin: 20px 0;
     }
@@ -239,7 +234,7 @@ img {
     }
 
     .navbar li{
-        font-size: 10px;
+        font-size: 8px;
         white-space: nowrap;
     }
 
@@ -269,11 +264,6 @@ img {
   
     .grid-card .description p{
       font-size: 14px;
-    }
-    .post_body .post_image {
-        margin-top: 60px;
-        width: 298px;
-        height: auto;
     }
     
     /* VIDEO 375*/
