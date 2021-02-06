@@ -196,8 +196,9 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'Body',
         'toolbar_Body': [
             ['Source', '-', 'Save', 'NewPage', 'Preview', 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord' 'NumberedList', 'BulletedList',
-                '-', 'Outdent', 'Indent', '-', 'Blockquote', 'Image', 'Iframe', 'Styles', 'Format', 'Font', 'FontSize', 'TextColor', 'Codesnippet']
+                '-', 'Outdent', 'Indent', '-', 'Blockquote', 'Image', 'Iframe', 'Styles', 'Format', 'Font', 'FontSize', 'TextColor', 'CodeSnippet']
         ],
+        'width': "100%",
         'extraPlugins': 'codesnippet'
     }
 
