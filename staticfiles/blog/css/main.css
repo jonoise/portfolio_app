@@ -270,9 +270,15 @@ img {
     .grid-card .description p{
       font-size: 14px;
     }
+    .post_body .post_image {
+        margin-top: 60px;
+        width: 298px;
+        height: auto;
+    }
+    
     /* VIDEO 375*/
     .post_body .youtube_video {
-    width: 289px;
+    width: 298px;
     height: 200px;
     }
 }
