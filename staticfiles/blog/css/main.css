@@ -27,7 +27,7 @@ a {
     color: var(--font_color);
 }
 
-nav ul, li {
+nav li {
     list-style-type: none;
 }
 
