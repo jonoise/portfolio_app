@@ -35,7 +35,7 @@ class Post(models.Model):
     thumbnail = models.ImageField(
         upload_to='media/blog/thumbnails/', blank=True, null=True, default="blog/default_blog.jpg")
     slug = models.SlugField(max_length=250, unique_for_date='publish')
-    body = RichTextUploadingField(config_name="post", null=True, blank=True)
+    body = RichTextUploadingField(config_name="body", null=True, blank=True)
 
     objects = models.Manager()
     draft = DraftManager()
