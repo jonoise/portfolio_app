@@ -163,6 +163,7 @@ EMAIL_PORT = 465
 EMAIL_USE_TLS = True
 EMAIL_USER_SSL = True
 
+
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
@@ -194,6 +195,7 @@ LOGGING = {
 
 AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_QUERYSTRING_AUTH = False
 AWS_STORAGE_BUCKET_NAME = 'amilkarmediafiles'
 
 AWS_FILE_OVERWRITE = False
