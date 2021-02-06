@@ -30,11 +30,12 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name='blog_posts')
 
     title = models.CharField(max_length=250, verbose_name='title')
-    description = RichTextField(null=True, blank=True)
+    description = RichTextField(
+        config_name="description", null=True, blank=True)
     thumbnail = models.ImageField(
         upload_to='media/blog/thumbnails/', blank=True, null=True, default="blog/default_blog.jpg")
     slug = models.SlugField(max_length=250, unique_for_date='publish')
-    body = RichTextUploadingField(null=True, blank=True)
+    body = RichTextUploadingField(config_name="post", null=True, blank=True)
 
     objects = models.Manager()
     draft = DraftManager()

@@ -184,7 +184,23 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'full',
         'height': 300,
         'width': "100%",
+
+    },
+    'description': {
+        'toolbar': 'Special',
+        'toolbar_Special': [
+            ['Source', '-', 'Link', 'Bold', 'Italic']
+        ]
+    },
+    'body': {
+        'toolbar': 'Body',
+        'toolbar_Body': [
+            ['Source', '-', 'Save', 'NewPage', 'Preview', 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord' 'NumberedList', 'BulletedList',
+                '-', 'Outdent', 'Indent', '-', 'Blockquote', 'Image', 'Iframe', 'Styles', 'Format', 'Font', 'FontSize', 'TextColor', 'Codesnippet']
+        ],
+        'extraPlugins': 'codesnippet'
     }
+
 }
 
 LOGGING = {
