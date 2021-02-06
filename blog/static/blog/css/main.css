@@ -208,6 +208,11 @@ img {
         width: 620px;
         height: 398px;
     }
+    .post_body .post_image {
+        margin-top: 60px;
+        width: 620px;
+        height: auto;
+    }
 }
 
 /* Tablets and under */
@@ -217,18 +222,14 @@ img {
         font-size: 20px;
     }
     .post_body .post_image {
-        margin-top: 40px;
-        width: 100%;
+        margin-top: 60px;
+        width: 408px;
         height: auto;
     }
     .post_body img {
         margin: 20px 0;
     }
 
-    .post_body .youtube_video {
-        width: 450px;
-        height: 225px;
-    }
     .container {
         padding: 10px;
     }
@@ -239,7 +240,7 @@ img {
     }
     /* VIDEO 500*/
     .post_body .youtube_video {
-        width: 389px;
+        width: 408px;
         height: 240px;
     }
 }
