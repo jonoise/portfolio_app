@@ -1,0 +1,36 @@
+{% extends 'frontend/base.html' %}
+{% load widget_tweaks %}
+{% block title %}Amilkar Munoz - Contact me :){% endblock title %}
+
+{% block body %}
+<div class="container">
+    <section class="contact">
+        <div class="container flex">
+            <div class="contact-form">
+                <h3 id="contact">CONTACT</h3>
+                <p>Déjame un mensaje para saber que estuviste por aquí! Será un gusto leerte. :)</p>
+                <div class="card">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <!--1 form control div f/e input
+                        and add the margindesired-->
+                        <div class="form-control">
+                            {% render_field form.name placeholder="Nombre" %}
+                        </div>
+                        <div class="form-control">
+                            {% render_field form.email placeholder="Email" %}
+                        </div>
+                        <div class="form-control">
+                            {% render_field form.subject placeholder="Título" %}
+                        </div>
+                        <div class="form-control">
+                            {% render_field form.message rows="10" placeholder="Título" class="textarea" %}
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="Enviar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock body %}

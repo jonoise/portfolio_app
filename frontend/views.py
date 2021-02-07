@@ -37,7 +37,23 @@ def portfolio(request):
 
 
 def contact(request):
-    return render(request, 'frontend/contact.html')
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+
+        if form.is_valid():
+            send_mail(subject=form.cleaned_data['subject'],
+                      message=render_to_string('frontend/contact_mail.html', {'name': form.cleaned_data['name'],
+                                                                              'email': form.cleaned_data['email'],
+                                                                              'message': form.cleaned_data['message']}),
+                      from_email=settings.EMAIL_HOST_USER,
+                      recipient_list=['amilkarms@outlook.com'],
+                      fail_silently=False)
+            return redirect('frontend:thankyou')
+    context = {
+        'form': form,
+    }
+    return render(request, 'frontend/contact.html', context)
 
 
 def next(request):
