@@ -17,6 +17,9 @@
                 <img src="{{ post.thumbnail.url }}" alt="">
                 <div class="title">
                     <h1>{{post.title.title}}</h1>
+                    {% if user.is_authenticated %}
+                    <h1><a href="{% url 'blog:post_edit' post.pk %}">Editar</a></h1>
+                    {% endif %}
                     <h5>escrito por <a href="{% url 'frontend:index' %}">{{post.author.first_name}}
                             {{post.author.last_name}}</a>. Publicado:
                         {{post.publish|date:'M d, Y'}}</h5>
