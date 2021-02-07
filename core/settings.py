@@ -171,7 +171,7 @@ EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
 EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_HOST_USER = os.getenv('MAILGUN_SMTP_LOGIN')
 EMAIL_HOST_PASSWORD = os.getenv('MAILGUN_SMTP_PASSWORD')
-EMAIL_PORT = 465
+EMAIL_PORT = os.getenv('MAILGUN_SMTP_PORT')
 EMAIL_USE_TLS = True
 EMAIL_USER_SSL = True
 
