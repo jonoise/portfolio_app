@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 /*---------- BLOG MAIN CSS FILE ----------*/
 
@@ -160,7 +160,8 @@ img {
 
 .post_body p {
     font-weight: 300;
-    font-family: arial;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .post_body li {
