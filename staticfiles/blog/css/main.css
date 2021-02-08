@@ -189,6 +189,13 @@ img {
         width: 968px;
         height: 654px;
     }
+
+    
+    /*code snippets*/
+    .post_body code {
+        width: 968px;
+        height: 100%;
+    }
 }
 
 
@@ -214,6 +221,13 @@ img {
         width: 620px;
         height: 398px;
     }
+
+    
+    /*code snippets*/
+    .post_body code {
+        width: 620px;
+        height: 100%;
+    }
 }
 
 /* Tablets and under */
@@ -238,6 +252,12 @@ img {
         font-size: 8px;
         white-space: nowrap;
     }
+
+    /*code snippets*/
+    .post_body code {
+        width: 420px;
+        height: 100%;
+    }
 }
 
 @media (max-width: 420px) {
@@ -245,9 +265,16 @@ img {
         width: 345px;
         height: 240px;
     }
+        /*code snippets*/
+        .post_body code {
+            width: 345px;
+            height: 100%;
+        }
 }
 
 @media (max-width: 370px) {
+    
+
     .personal .links p {
         font-size: 12px;
     }
@@ -269,5 +296,11 @@ img {
     .post_body .youtube_video {
     width: 298px;
     height: 200px;
+    }
+
+    /*code snippets*/
+    .post_body code {
+        width: 298px;
+        height: 100%;
     }
 }
