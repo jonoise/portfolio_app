@@ -27,9 +27,10 @@
             </div>
             <div class="post_body">
                 <p>{{post.body|safe}}</p>
-            </div>
-            <div class="facebook_comments">
-                <div class="fb-comments" data-href="{{post.get_absolute_url}}" data-width="" data-numposts="3"></div>
+                <div class="facebook_comments">
+                    <div class="fb-comments" data-href="{{post.get_absolute_url}}" data-width="" data-numposts="3">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="blog_right_column">
