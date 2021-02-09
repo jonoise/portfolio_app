@@ -183,6 +183,10 @@ img {
 
 }
 
+    /*code snippets*/
+    .post_body code {
+        font-size: 24px;
+    }
 
 /* Tablets and under */
 @media (max-width: 1024px) {
@@ -196,6 +200,7 @@ img {
     .post_body code {
         width: 968px;
         height: 100%;
+        font-size: 18px;
     }
 }
 
@@ -228,6 +233,7 @@ img {
     .post_body code {
         width: 620px;
         height: 100%;
+        font-size: 16px;
     }
 }
 
