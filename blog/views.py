@@ -60,8 +60,7 @@ def post_detail(request, year, month, day, slug):
                              )
     post.visited += 1
     post.save()
-    most_visited = Post.published.all().annotate(most_visited=Count("visited")
-                                               ).order_by("most_visited", "-publish")[:3]
+    most_visited = Post.published.all().order_by("-visited")[:3]
     most_tags = Post.tags.most_common()[:3]
 
     post_tags_ids = post.tags.values_list('id', flat=True)
