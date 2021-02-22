@@ -16,8 +16,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def post_list(request, tag_slug=None):
     posts = Post.published.all()
     tag = None
-    most_visited = Post.published.all().annotate(most_visited=Count("visited")
-                                               ).order_by("most_visited", "-publish")[:3]
+    most_visited = Post.published.all().order_by("-visited")[:3]
     most_tags = Post.tags.most_common()[:3]
 
     if tag_slug:
