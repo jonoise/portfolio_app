@@ -1,6 +1,13 @@
 {% extends 'frontend/base.html' %}
 {% load static %}
 
+{% block og_tags %}
+<meta property="og:title" content="{{post.title}}" />
+<meta property="og:type" content="post" />
+<meta property="og:url" content="amilkar.dev{{post.get_absolute_url}}" />
+<meta property="og:image" content="{{post.thumbnail.url}}" />
+{% endblock og_tags %}
+
 {% block custom_css %}
 <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
 {% endblock %}

@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block og_tags %}{% endblock og_tags %}
     <link rel="icon" type="ico" href="{% static '/frontend/images/favicon.ico' %}" />
     <link rel="stylesheet" href="{% static 'frontend/css/main.css' %}">
     {% block custom_css %}
