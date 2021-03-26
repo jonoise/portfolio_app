@@ -2,6 +2,12 @@
 {% load blog_tags %}
 {% load static %}
 
+{% block og_tags %}
+<meta property="og:title" content="Late Night Blog - By Amilkar Munoz " />
+<meta property="og:type" content="blog" />
+<meta property="og:url" content="amilkar.dev/blog" />
+{% endblock og_tags %}
+
 {% block custom_css %}
 <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
 {% endblock %}
