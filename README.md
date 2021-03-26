@@ -6,7 +6,7 @@ I would like to start this by quoting the great David Malan, shepherd of hundred
 >What ultimately matters [in this course] is not so much where you end up relative to your classmates but where you end up relative to yourself when you began.
 >-David Malan, CS50.
 
-This is a significant project for me. Primarily because it is going to be my personal website for the entire 2021. And secondly but at the same level of importancy, because it is my first project deplyed to the internet. And I felt like I got exposure to a lot of new features and ways of discovering new features that excites me when thinking of the cool things I'm going to be learning from now on. Python is a beautiful language and I'm happy I'm learning it. And also I feel like choosing Heroku for this project was a perfect match for me. Because Herokua and its CLI it's an amazing beautiful tool aswell. But let's start discuss business:
+This is a significant project for me. Primarily because it is going to be my personal website for the entire 2021. And secondly but at the same level of importancy, because it is my first project deployed to the internet. And I felt like I got exposure to a lot of new features and ways of discovering new features that excites me when thinking of the cool things I'm going to be learning from now on. Python is a beautiful language and I'm happy I'm learning it. And also I feel like choosing Heroku for this project was a perfect match for me. Because Herokua and its CLI it's an amazing beautiful tool aswell. But let's start discuss business:
 
 ## Project General Specifications:
 
