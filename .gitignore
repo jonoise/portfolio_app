@@ -5,3 +5,4 @@ snippets.txt
 heroku.crt
 server.crt
 server.key
+env
